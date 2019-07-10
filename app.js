@@ -11,13 +11,13 @@ var colors = generateRandomColors(6);
 pickedColor = pickColor();
 
 // Reset Game...
-resetButton.addEventListener('click', function () {
+resetButton.addEventListener('click', function(){
     colors = generateRandomColors(6);
     pickedColor = pickColor();
     systemMessageDisplay.innerHTML = pickedColor;
     header.style.backgroundColor = 'steelblue';
     userMessageDisplay.innerHTML = '';
-    for (i = 0; i <= squares.length; i++) {
+    for(i=0; i<=squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
     }
 })
@@ -25,18 +25,18 @@ resetButton.addEventListener('click', function () {
 
 systemMessageDisplay.innerHTML = pickedColor;
 
-for (i = 0; i < squares.length; i++) {
+for (i=0; i<squares.length; i++) {
     //apply background colour to all the squares...
     squares[i].style.backgroundColor = colors[i]
 
     //enable click event on each square.....
-    squares[i].addEventListener('click', function () {
+    squares[i].addEventListener('click', function() {
         //show user the current value....
         userMessageDisplay.innerHTML = this.style.backgroundColor;
         //if the user selected the right colour....
         var clickedColor = this.style.backgroundColor;
         //check if the selected colour matches the default colour...
-        if (pickedColor === clickedColor) {
+        if(pickedColor === clickedColor) {
             header.style.backgroundColor = pickedColor;
             changeColors(pickedColor);
         }
@@ -49,7 +49,7 @@ for (i = 0; i < squares.length; i++) {
 };
 
 function changeColors(color) {
-    for (i = 0; i <= squares.length; i++) {
+    for (i=0; i<=squares.length;i++) {
         squares[i].style.backgroundColor = color;
     }
 }
@@ -69,7 +69,7 @@ function randomColors() {
 
 function generateRandomColors(num) {
     var arr = [];
-    for (i = 0; i < num; i++) {
+    for (i=0; i < num; i++) {
         arr.push(randomColors());
     }
     return arr;
