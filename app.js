@@ -23,16 +23,18 @@ Color Game
     <button class="mode selected">Hard</button> 
 </div>
 
+<div id="container">
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
+    <div class="square"></div>
 
+</div>
 
-
-
-
-
-
-
+<script type="text/javascript" src="app.js"></script>
 
 </body>
-
 
 </html>
