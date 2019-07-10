@@ -17,3 +17,35 @@ var squares = document.querySelectorAll(.squares);
 for (i = 0; i < squares.length; i++) {
     squares.style.backgroundColor = colors[i]
 }
+
+//enabling click functionality
+for(i=0; i<= squares.length; i++) {
+    squares[i].addEventListeners('click', function() {
+        alert('option was clicked');
+    });
+}
+//if correct block is clicked do something ....
+//if wrong block is clicked do something ....
+
+
+pickedColor = colors[3];
+
+for (i=0; i <= squares.length; i++) {
+    //apply background color to all squares ....
+    squares[i].style.backgroundColor = colors[i]
+    //enable click event on each square
+    squares[i].addEventListener('click', function() {
+        //if the user selected the right color ....
+        var clickedColor = this.style.backgroundColor;
+        //check if the selected color matches default color
+        if (pickedColor === clickedColor) {
+            changeColors(pickedColor);
+        }
+        //if the user selected wrong color ....
+        else {
+            this.style.backgroundColor = "#232323";
+            messageDisplay.text = "Wrong Choice!";
+        }
+    })
+};
+
