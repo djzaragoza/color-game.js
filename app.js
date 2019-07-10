@@ -5,3 +5,15 @@ var squares = document.querySelectorAll(".square"); // array of all the squares 
 var resetButton = document.querySelector("#reset"); // variable is the "new game" button in the control panel
 var modeButtons = document.querySelectorAll(".mode"); //array which has easy and hard mode buttons
 
+var colors = [
+    "rgb(255, 0, 0)",
+    "rgb(255, 0, 255)",
+    "rgb(255, 225, 0)",
+    "rgb(255, 0, 255)",
+    "rgb(0, 255, 255)",
+    "rgb(0, 255, 0)"
+];
+var squares = document.querySelectorAll(.squares);
+for (i = 0; i < squares.length; i++) {
+    squares.style.backgroundColor = colors[i]
+}
